@@ -40,23 +40,26 @@ brew install postgresql
 brew unlink postgresql
 ```
 
-The previous install of postgresql runs `initdb`, which creates database structures incompatible with 9.6.10. This needs to be removed with:
+The previous install of postgresql runs `initdb`, which creates database structures incompatible with 13.2. This needs to be removed with:
 
 ```sh
-rm -rf /usr/local/var/postgres
+rm -rf /usr/local/var/postgres 
+
+# for apple m1 it's
+rm -rd /opt/homebrew/var/postgres
 ```
 
 Now install Postgres from this tap with:
 
 ```sh
-brew install alexanderbich/tap/postgresql  # yes, without the homebrew-
+brew install alexanderbich/tap/postgresql
 ```
 
 Now you will have both 13.1 and the latest version of Postgres installed.
 Switch to 13.1 with:
 
 ```sh
-brew switch postgresql 13.1
+brew link postgresql 13.1
 ```
 
 Postgis 3.1.1 can be installed with:
