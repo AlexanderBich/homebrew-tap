@@ -4,7 +4,7 @@ This is a Homebrew Tap, which features formulas to help pin
 Postgres to 13.2 and Postgis to 3.1.1.
 
 Homebrew will pull in the latest version of formulas when they are upgraded,
-meaning that users can inadvertently be upgraded to Postgresql 10. The
+meaning that users can inadvertently be upgraded to Postgresql 14. The
 postgresql.rb formula here ensures that 13.2 is installed, and the postgis.rb
 formulate ensures that 3.1.1 is installed.
 
